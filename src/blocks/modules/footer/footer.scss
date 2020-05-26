@@ -1,0 +1,57 @@
+.footer {
+
+    &__maps {
+        position: absolute;
+        padding: 140px;
+
+        @include b(840) {
+            padding: 145px 90px 10px 100px;
+        }
+        @include b(715) {
+            padding: 145px 20px 90px 60px;
+
+        }
+
+        @include b(680) {
+            position: relative;
+            padding: 0px;
+            
+        }
+    }
+    &__text {
+        width: 200px;
+        height: 200px;
+        background-color: #15236e;
+        color: #fff;
+        padding: 10px;
+        opacity: 0.8;
+        text-align: center;
+
+        @include b(680) {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            
+        }
+
+        
+        span {
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            color: #ffff00;
+        }
+        p {
+            font-size: 17px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        
+    }
+
+
+}

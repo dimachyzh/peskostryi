@@ -1,0 +1,223 @@
+.header {
+    padding: 35px 0;
+    background-color: #15236E;
+    opacity: 0.8;
+    
+    
+    &__nav-list {
+        display: flex;
+
+        li {
+            margin-left: 37px;
+            @include b(tablet) {
+                margin-left: 0;
+            }
+        }
+        @include b(tablet) {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    // &__btn-menu {
+    //     display: none;
+    //     float: right;
+    //     width: 16px;
+    //     height: 12px;
+    //     margin-top: 12px;
+    //     position: relative;
+    //     left: 0;
+    //     top: 0;
+    //     @include trs;
+    //     @include b(tablet) {
+    //         margin-top: 0;
+    //     }
+
+    //     &.active {
+    //         :nth-child(1) {
+    //             transform: rotate(-45deg);
+    //             top: 4px;
+    //         }
+    //     }
+        
+    //     &.active {
+    //         :nth-child(2) {
+    //             opacity: 0;
+    //         }
+    //     }
+        
+    //     &.active {
+    //         :nth-child(3) {
+    //             transform: rotate(45deg);
+    //             top: 4px;
+    //         }
+    //     }
+
+    //     span {
+    //         position: absolute;
+    //         width: 100%;
+    //         height: 2px;
+    //         background-color: #fff;
+    //         transition: all .3s;
+
+    //     }
+
+    //     :nth-child(2) {
+    //         top: 5px;
+    //     }
+
+    //     :nth-child(3) {
+    //         top: 10px;
+    //     }
+    //     @include b(tablet) {
+    //         display: block;
+    //     }
+    // }
+    
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include b(tablet) {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        
+    }
+    
+    &__logo-link {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__logo-title {
+        color: #ffff00;
+        font-size: 32px;
+        letter-spacing: 1.9px;
+        line-height: 1.3em;
+        font-weight: 700;
+
+        @include b(tablet) {
+            text-align:center;
+        }
+    }
+    
+    &__logo-text {
+        color: $white;
+        font-size: 16px;
+        font-family: $second-font;
+        letter-spacing: 1.45px;
+
+        @include b(tablet) {
+                padding-bottom: 10px;
+        }
+    }
+    
+    &__nav-item {
+        a {
+            color: #fff;
+            font-family: $second-font;
+            position: relative;
+                
+                
+            &:before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: $white;
+                left: 0;
+                bottom: -8px;
+                transition: all .3s;
+            }
+
+            &:hover:before {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $white;
+            }
+            @include b(tablet) {
+                color: #fff;
+                font-size: 20px;
+                &:hover {
+                    color: #ffff00;
+                }
+            }
+        }
+        @include b(tablet) {
+            display: block;
+            text-align: center;
+            padding: 0 15px 20px;
+            width: 100%;
+        }
+    }
+    
+    &__nav-wrap {
+        display: flex;
+        align-items: center;
+        @include b(tablet) {
+            display: flex;
+            flex-direction: column;
+           color: #fff;
+        }
+    }
+
+    @include b(tablet) {
+        &__nav {
+            display: table;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__nav-number {
+        color:#ffff00;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        
+        a {
+            color: #ffff00;
+        }
+        
+    }
+
+    &--white-bg {
+        background-color: #fafafa;
+        padding: 18px 0;
+
+        .header {
+
+
+            &__logo-title {
+                color: $main-color;
+            }
+
+            &__nav-item {
+                a {
+                    color: $main-color;
+                    &:before {
+                        background-color: $beige;
+                    }
+                }
+            }
+
+            &__logo-text {
+                color: $black;
+            }
+
+            &__btn-menu {
+                span {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
